@@ -40,7 +40,7 @@ Return a list of all merchants (and their unique identifiers) available. The pro
 
 
 + Response 200 (application/json)
-    + Attributes (1 List MerchantsResponse)
+    + Attributes (1 List Merchants Response Example)
 
     + Body
 
@@ -70,7 +70,7 @@ In our case, `Merchant` should evaluate to `justsalad`.
 
 
 + Response 200 (application/json)
-    + Attributes (2 List Locations by MerchantResponse)
+    + Attributes (2 List Locations by Merchant)
 
     + Body
 
@@ -100,7 +100,7 @@ Return includes menu items, as well as individual ingredients.
 
 
 + Response 200 (application/json)
-    + Attributes (3 Show MenuResponse)
+    + Attributes (3 Show Menu example response)
 
 
 
@@ -151,7 +151,7 @@ Receive a finalized order for error checking and completion.
 
 # Data Structures
 
-## 1 List MerchantsResponse (object)
+## 1 List Merchants Response Example (object)
 
 
 ### Properties
@@ -176,7 +176,7 @@ Receive a finalized order for error checking and completion.
 + `allows_order_scheduling`: `true` (boolean, required) 
 
 
-## 2 List Locations by MerchantResponse (object)
+## 2 List Locations by Merchant (object)
 
 
 ### Properties
@@ -290,7 +290,7 @@ Receive a finalized order for error checking and completion.
 + `closes_at`: `21:00` (string, required) 
 
 
-## 3 Show MenuResponse (object)
+## 3 Show Menu example response (object)
 
 
 ### Properties

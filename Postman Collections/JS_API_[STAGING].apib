@@ -6,13 +6,11 @@
   },
   "item": [
     {
-      "_postman_id": "3504198-c9cd694c-4c89-0903-b505-9855f2c50b11",
       "name": "Levelup API",
-      "description": "API Endpoints for LevelUp's \"Provider Enablement\" integration.\n\nDOCS: http://developer.thelevelup.com/provider-enablement/",
       "item": [
         {
-          "_postman_id": "3504198-12f5bf3b-c1b1-e9ad-8bf3-4ed6e22b8d29",
           "name": "(0) Retrieve API token (fromKey)",
+          "_postman_id": "3504198-12f5bf3b-c1b1-e9ad-8bf3-4ed6e22b8d29",
           "request": {
             "method": "GET",
             "header": [
@@ -25,17 +23,12 @@
                 "value": "{{API_KEY}}"
               }
             ],
-            "body": {
-              "mode": "raw",
-              "raw": ""
-            },
             "url": "{{URL}}/access_token",
             "description": "Create a token from an API Key.\nToken must be sent with each following request via the x-www-token header."
           },
           "response": []
         },
         {
-          "_postman_id": "3504198-cc4d64ea-7527-0871-5975-4ff712ec82d0",
           "name": "(1) List Merchants",
           "event": [
             {
@@ -49,6 +42,7 @@
               }
             }
           ],
+          "_postman_id": "3504198-cc4d64ea-7527-0871-5975-4ff712ec82d0",
           "request": {
             "method": "GET",
             "header": [
@@ -62,10 +56,6 @@
                 "description": "Token retrieved via API Key"
               }
             ],
-            "body": {
-              "mode": "raw",
-              "raw": ""
-            },
             "url": "{{URL}}/merchants",
             "description": "Return a list of all merchants (and their unique identifiers) available. The provider_id returned here will be passed to subsequent calls to the locations index endpoint detailed below. It therefore must contain only characters that are valid in a URL (ASCII)."
           },
@@ -85,10 +75,6 @@
                     "value": "{{TOKEN}}"
                   }
                 ],
-                "body": {
-                  "mode": "raw",
-                  "raw": ""
-                },
                 "url": "{{LOCAL}}/merchants"
               },
               "status": "OK",
@@ -133,8 +119,8 @@
           ]
         },
         {
-          "_postman_id": "3504198-e5730c4a-bcaf-1a4a-d053-e60508d917e3",
           "name": "(2) List Locations by Merchant",
+          "_postman_id": "3504198-e5730c4a-bcaf-1a4a-d053-e60508d917e3",
           "request": {
             "method": "GET",
             "header": [
@@ -147,10 +133,6 @@
                 "value": "{{TOKEN}}"
               }
             ],
-            "body": {
-              "mode": "raw",
-              "raw": ""
-            },
             "url": "{{URL}}/merchants/{{MERCHANT}}/locations",
             "description": "Retrieve all just salad locations. Merchant ID is a string value from previous endpoint.\n\nIn our case, `Merchant` should evaluate to `justsalad`."
           },
@@ -170,10 +152,6 @@
                     "value": "{{TOKEN}}"
                   }
                 ],
-                "body": {
-                  "mode": "raw",
-                  "raw": ""
-                },
                 "url": "{{URL}}/merchants/{{MERCHANT}}/locations"
               },
               "status": "OK",
@@ -230,8 +208,8 @@
           ]
         },
         {
-          "_postman_id": "3504198-47ff7381-6b3c-a0f5-3690-445f84afe70f",
           "name": "(3) Show Menu",
+          "_postman_id": "3504198-47ff7381-6b3c-a0f5-3690-445f84afe70f",
           "request": {
             "method": "GET",
             "header": [
@@ -244,10 +222,6 @@
                 "value": "{{TOKEN}}"
               }
             ],
-            "body": {
-              "mode": "raw",
-              "raw": ""
-            },
             "url": "{{URL}}/locations/{{LOCATION_ID}}/menu",
             "description": "Retrieve menu from a location, by ID.\n\nReturn includes menu items, as well as individual ingredients."
           },
@@ -267,10 +241,6 @@
                     "value": "{{TOKEN}}"
                   }
                 ],
-                "body": {
-                  "mode": "raw",
-                  "raw": ""
-                },
                 "url": "{{LOCAL}}/locations/{{LOCATION_ID}}/menu"
               },
               "status": "OK",
@@ -315,8 +285,8 @@
           ]
         },
         {
-          "_postman_id": "3504198-64d36740-85dd-cf1d-3c36-bdbcea8c6fa0",
           "name": "(4) Create Order Validation",
+          "_postman_id": "3504198-64d36740-85dd-cf1d-3c36-bdbcea8c6fa0",
           "request": {
             "method": "POST",
             "header": [
@@ -339,8 +309,8 @@
           "response": []
         },
         {
-          "_postman_id": "3504198-37c5865e-8a26-4104-8f8f-c8520cf6f359",
           "name": "(5) Create Order Submission",
+          "_postman_id": "3504198-37c5865e-8a26-4104-8f8f-c8520cf6f359",
           "request": {
             "method": "POST",
             "header": [
@@ -363,6 +333,8 @@
           "response": []
         }
       ],
+      "_postman_id": "3504198-c9cd694c-4c89-0903-b505-9855f2c50b11",
+      "description": "API Endpoints for LevelUp's \"Provider Enablement\" integration.\n\nDOCS: http://developer.thelevelup.com/provider-enablement/",
       "event": [
         {
           "listen": "prerequest",

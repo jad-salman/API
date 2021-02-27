@@ -187,6 +187,61 @@ Receive a finalized order for error checking and completion.
     + Attributes (5 Create Order Submission Request)
 
 
+    + Body
+
+            {
+                "order_submission": {
+                    "desired_ready_time": "2016-03-11T11:44:08",
+                    "credit_card": {
+                        "number": "4111111111111111",
+                        "cvv": "1234",
+                        "zip": "02110",
+                        "type": "American Express",
+                        "expiration_month": 2,
+                        "expiration_year": 2020,
+                        "city": "boston",
+                        "address": "One Federal St.",
+                        "postal_code": "02110",
+                        "reused_token": true,
+                        "state": "ma"
+                    },
+                    "items": [
+                        {
+                            "item": {
+                                "category_group_id": "6734384",
+                                "category_id": "75759",
+                                "name": "Slice of cake",
+                                "provider_id": "9876",
+                                "quantity": 2,
+                                "options": [
+                                    {
+                                        "option": {
+                                            "provider_id": "62459",
+                                            "option_group_id": "123",
+                                            "quantity": 1
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "metadata": {
+                        "revel_authentication_token": "asdf232342453asdTSfs"
+                    },
+                    "tip": 100,
+                    "special_instructions": "please double bag my order",
+                    "user": {
+                        "born_at": "1986-03-11T11:44Z",
+                        "first_name": "joe",
+                        "gender": "male",
+                        "last_name": "smith",
+                        "email": "example@gmail.com",
+                        "password": "password123",
+                        "phone": "4445556666"
+                    }
+                }
+            }
+
 
 + Response 200 
 
